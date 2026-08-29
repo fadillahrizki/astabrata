@@ -62,6 +62,25 @@ export default function Convergence() {
       "-",
     ],
   ];
+
+  const stats = [
+    ["Kebutuhan Belum Terpenuhi", "4", FileText, "text-blue-700"],
+    ["OPD Sedang Menangani", "2", Building2, "text-orange-500"],
+    ["Intervensi Selesai", "1", CheckCircle2, "text-green-700"],
+    ["Belum Selesai", "3", Clock3, "text-red-600"],
+  ];
+
+  const tableHeaders = [
+    "NO.",
+    "KEBUTUHAN BELUM TERPENUHI",
+    "OPD PELAKSANA",
+    "INTERVENSI YANG DITETAPKAN",
+    "TARGET HASIL",
+    "TANGGAL TARGET",
+    "STATUS",
+    "HASIL INTERVENSI",
+    "AKSI",
+  ];
   return (
     <main className="p-4 lg:p-6 space-y-4 max-w-[1700px] mx-auto">
       <div className="flex items-start justify-between gap-3">
@@ -79,12 +98,7 @@ export default function Convergence() {
       <div className="grid grid-cols-1 xl:grid-cols-[1.25fr_1fr] gap-3">
         <Person />
         <div className="grid grid-cols-2 gap-3">
-          {[
-            ["Kebutuhan Belum Terpenuhi", "4", FileText, "text-blue-700"],
-            ["OPD Sedang Menangani", "2", Building2, "text-orange-500"],
-            ["Intervensi Selesai", "1", CheckCircle2, "text-green-700"],
-            ["Belum Selesai", "3", Clock3, "text-red-600"],
-          ].map(([l, v, I, c]) => (
+          {stats.map(([l, v, I, c]) => (
             <div
               key={l}
               className="rounded-xl border border-slate-200 bg-white p-4 flex items-center gap-3"
@@ -106,17 +120,7 @@ export default function Convergence() {
         <table className="w-full min-w-[1200px] text-[12px]">
           <thead className="bg-slate-50">
             <tr>
-              {[
-                "NO.",
-                "KEBUTUHAN BELUM TERPENUHI",
-                "OPD PELAKSANA",
-                "INTERVENSI YANG DITETAPKAN",
-                "TARGET HASIL",
-                "TANGGAL TARGET",
-                "STATUS",
-                "HASIL INTERVENSI",
-                "AKSI",
-              ].map((x) => (
+              {tableHeaders.map((x) => (
                 <th key={x}>{x}</th>
               ))}
             </tr>
