@@ -62,7 +62,7 @@ export default function Sidebar({ page, setPage, open, setOpen }) {
 
   return (
     <aside
-      className={`fixed z-40 inset-y-0 left-0 w-[174px] bg-[#062b67] text-white sidebar-shadow transition-transform duration-300 lg:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}
+      className={`fixed z-40 inset-y-0 left-0 w-[174px] bg-[#062b67] text-white sidebar-shadow transition-transform duration-300 lg:translate-x-0 ${open ? "translate-x-0 pt-[100px]" : "-translate-x-full"}`}
     >
       <div className="h-full flex flex-col">
         <div className="h-[145px] flex items-center justify-center border-b border-white/10">

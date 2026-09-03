@@ -13,7 +13,7 @@ export default function Layout() {
     <>
       <Sidebar page={page} setPage={setPage} open={open} setOpen={setOpen} />
       <div className="lg:pl-[174px] min-h-screen">
-        <Header setOpen={setOpen} />
+        <Header setOpen={setOpen} open={open} />
         <Outlet />
       </div>
     </>

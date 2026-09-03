@@ -1,10 +1,26 @@
-import { CalendarDays, Clock3, Menu, UserRound } from "lucide-react";
-export default function Header({ setOpen }) {
+import {
+  CalendarDays,
+  ChevronDown,
+  Clock3,
+  Menu,
+  UserRound,
+} from "lucide-react";
+import Dropdown from "./Dropdown";
+export default function Header({ open, setOpen }) {
+  const menuItems = [
+    {
+      label: "Account settings",
+      onClick: () => console.log("Account clicked"),
+    },
+    { label: "Support", onClick: () => console.log("Support clicked") },
+    { label: "License", onClick: () => console.log("License clicked") },
+  ];
+
   return (
-    <header className="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-slate-100">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100">
       <div className="h-[88px] px-5 lg:px-8 flex items-center gap-5">
         <button
-          onClick={() => setOpen(true)}
+          onClick={() => setOpen(!open)}
           className="lg:hidden rounded-lg border border-slate-200 p-2 text-[#062b67]"
         >
           <Menu className="w-6 h-6" />
@@ -29,13 +45,8 @@ export default function Header({ setOpen }) {
             <Clock3 className="w-5 h-5" />
             09:30 WIB
           </div>
-          <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
-            <span className="w-8 h-8 rounded-full bg-[#062b67] text-white flex items-center justify-center">
-              <UserRound className="w-5 h-5" />
-            </span>
-            <span className="hidden md:inline">Admin Kabupaten</span>
-            <span>⌄</span>
-          </div>
+
+          <Dropdown label="Manage Settings" items={menuItems} isUser={true} />
         </div>
       </div>
     </header>
