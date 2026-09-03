@@ -13,7 +13,7 @@ export default function Header({ open, setOpen }) {
       onClick: () => console.log("Account clicked"),
     },
     { label: "Support", onClick: () => console.log("Support clicked") },
-    { label: "License", onClick: () => console.log("License clicked") },
+    { label: "Logout", onClick: () => console.log("Logout clicked") },
   ];
 
   return (
