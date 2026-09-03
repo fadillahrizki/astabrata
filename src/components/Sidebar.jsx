@@ -7,7 +7,7 @@ import {
   UserRound,
 } from "lucide-react";
 
-import crest from "../assets/crest.jpg";
+import crest from "../assets/crest.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Sidebar({ page, setPage, open, setOpen }) {
@@ -68,7 +68,7 @@ export default function Sidebar({ page, setPage, open, setOpen }) {
         <div className="h-[145px] flex items-center justify-center border-b border-white/10">
           <img
             src={crest}
-            className="w-[105px] h-[125px] object-cover rounded-sm"
+            className="w-[100px] h-[125px] object-cover rounded-sm"
             alt="Kabupaten Asahan"
           />
         </div>
