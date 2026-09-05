@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import Dropdown from "./Dropdown";
 
-import astabrata from "../assets/astabrata.jpeg";
+import astabrata from "../assets/astabrata.jpg";
 export default function Header({ open, setOpen }) {
   const menuItems = [
     {
@@ -30,7 +30,7 @@ export default function Header({ open, setOpen }) {
         <div className="hidden sm:flex items-center gap-4">
           <img
             src={astabrata}
-            className="object-cover rounded-sm w-20 h-20"
+            className="object-cover rounded-sm h-20"
             alt="Astabrata"
           />
           <div className="h-12 w-px bg-slate-200" />
