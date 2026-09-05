@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Sidebar({ page, setPage, open, setOpen }) {
   const navItems = [
-    { key: "/", label: <>Dashboard PPKS</>, icon: Home },
+    { key: "", label: <>Dashboard PPKS</>, icon: Home },
     {
       key: "profile",
       label: (

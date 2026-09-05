@@ -6,6 +6,8 @@ import {
   UserRound,
 } from "lucide-react";
 import Dropdown from "./Dropdown";
+
+import astabrata from "../assets/astabrata.jpeg";
 export default function Header({ open, setOpen }) {
   const menuItems = [
     {
@@ -26,11 +28,15 @@ export default function Header({ open, setOpen }) {
           <Menu className="w-6 h-6" />
         </button>
         <div className="hidden sm:flex items-center gap-4">
+          <img
+            src={astabrata}
+            className="object-cover rounded-sm w-20 h-20"
+            alt="Astabrata"
+          />
           <div className="h-12 w-px bg-slate-200" />
           <div className="text-[15px] font-bold leading-6 text-[#092b68] max-w-[360px]">
-            Dashboard Pemantauan & Pengendalian
-            <br />
-            Penanganan PPKS Kabupaten Asahan
+            Dashboard Pemantauan, Pengendalian dan Penanganan Graduasi PPKS
+            Kabupaten Asahan
           </div>
         </div>
         <div className="sm:hidden font-extrabold text-[#062b67] text-lg">

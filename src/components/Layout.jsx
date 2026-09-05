@@ -6,7 +6,7 @@ import Profile from "../pages/Profile";
 import { Outlet } from "react-router-dom";
 
 export default function Layout() {
-  const [page, setPage] = useState("dashboard");
+  const [page, setPage] = useState("");
   const [open, setOpen] = useState(false);
 
   return (
